@@ -1,0 +1,154 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<div class="error-page">
+  <div class="error-content">
+    <div class="error-icon">
+      <i class="fas fa-exclamation-triangle"></i>
+    </div>
+
+    <h1 class="error-title">404</h1>
+    <h2 class="error-subtitle">Страница није пронађена</h2>
+
+    <p class="error-message">
+      Жао нам је, али страница коју тражите не постоји или је премештена.
+    </p>
+
+    <div class="error-actions">
+      <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+        <i class="fas fa-home"></i>
+        Назад на почетну
+      </a>
+
+      <a href="{{ '/pages/biografija/' | relative_url }}" class="btn btn-outline">
+        <i class="fas fa-user"></i>
+        Биографија
+      </a>
+    </div>
+
+    <div class="error-help">
+      <h3>Можда тражите:</h3>
+      <ul class="error-links">
+        <li><a href="{{ '/pages/biografija/' | relative_url }}"><i class="fas fa-user"></i> Биографија</a></li>
+        <li><a href="{{ '/pages/projekti/' | relative_url }}"><i class="fas fa-project-diagram"></i> Пројекти</a></li>
+        <li><a href="{{ '/pages/video-galerija/' | relative_url }}"><i class="fas fa-video"></i> Видео галерија</a></li>
+        <li><a href="{{ '/pages/dokumentacija/' | relative_url }}"><i class="fas fa-file-alt"></i> Документација</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+.error-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.error-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-icon {
+  font-size: 4rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin: 0;
+  line-height: 1;
+}
+
+.error-subtitle {
+  font-size: 1.5rem;
+  color: #1e3d1e;
+  margin: 1rem 0;
+}
+
+.error-message {
+  font-size: 1.125rem;
+  color: #424242;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.error-actions {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-help {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f3fff3;
+  border-radius: 8px;
+  border: 1px solid #e8f5e8;
+}
+
+.error-help h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.error-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.error-links li {
+  margin: 0;
+}
+
+.error-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2e7d32;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.error-links a:hover {
+  background-color: rgba(46, 125, 50, 0.1);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .error-title {
+    font-size: 4rem;
+  }
+
+  .error-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-links {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

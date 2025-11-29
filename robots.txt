@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://olivera-amidzic.github.io/sitemap.xml
+
+# Allow search engines to crawl all content
+Allow: /pages/
+Allow: /assets/
+
+# Block access to temporary or development files
+Disallow: /temp/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /_site/
+
+# Crawl delay (optional, 1 second)
+Crawl-delay: 1

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'sr' }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {% seo %}
+
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/main.css' | relative_url }}"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        {% feed_meta %}
+
+        <!-- Theme colors -->
+        <meta
+            name="theme-color"
+            content="{{ site.theme_color | default: '#2e7d32' }}"
+        />
+        <meta
+            name="msapplication-navbutton-color"
+            content="{{ site.theme_color | default: '#2e7d32' }}"
+        />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232e7d32'/><text y='70' font-size='80' text-anchor='middle' x='50' fill='white'>О</text></svg>"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232e7d32' rx='20'/><text y='70' font-size='80' text-anchor='middle' x='50' fill='white'>О</text></svg>"
+        />
+    </head>
+
+    <body>
+        <div class="site-wrapper">
+            <header class="site-header" role="banner">
+                <div class="header-container">
+                    <div class="site-branding">
+                        <h1 class="site-title">
+                            <a href="{{ '/' | relative_url }}" rel="home"
+                                >{{ site.title }}</a
+                            >
+                        </h1>
+                    </div>
+
+                    <nav
+                        class="main-navigation"
+                        role="navigation"
+                        aria-label="Primary Navigation"
+                    >
+                        <button
+                            class="menu-toggle"
+                            aria-controls="primary-menu"
+                            aria-expanded="false"
+                        >
+                            <i class="fas fa-bars"></i>
+                            <span class="sr-only">Мени</span>
+                        </button>
+
+                        <ul class="nav-menu" id="primary-menu">
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/' | relative_url }}"
+                                    class="nav-link {% if page.url == '/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-home"></i>
+                                    Почетна
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/biografija/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/biografija/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-user"></i>
+                                    Биографија / CV
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/filozofija/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/filozofija/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-lightbulb"></i>
+                                    Филозофија
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/projekti/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/projekti/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-project-diagram"></i>
+                                    Пројекти
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/praksa/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/praksa/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-hands-helping"></i>
+                                    Примери добре праксе
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/dokumentacija/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/dokumentacija/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-file-alt"></i>
+                                    Педагошка документација
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/strategije/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/strategije/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-chess"></i>
+                                    Стратегије за унапређење
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/prezentacije/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/prezentacije/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-video"></i>
+                                    ПП Презентације
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/filmici/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/filmici/' %}active{% endif %}"
+                                >
+                                    <i class="fab fa-youtube"></i>
+                                    Филмићи
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="{{ '/pages/sertifikati/' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/pages/sertifikati/' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-certificate"></i>
+                                    Сертификати
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="site-main" role="main">
+                <div class="main-container">{{ content }}</div>
+            </main>
+
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>{{ site.title }}</h3>
+                            <p>{{ site.description }}</p>
+                        </div>
+
+                        {% if site.social %}
+                        <div class="footer-section">
+                            <h3>Пратите нас</h3>
+                            <div class="social-links">
+                                {% if site.social.youtube %}
+                                <a
+                                    href="{{ site.social.youtube }}"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="YouTube канал"
+                                >
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                {% endif %} {% if site.social.website %}
+                                <a
+                                    href="{{ site.social.website }}"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Профил на сајту школе"
+                                >
+                                    <i class="fas fa-school"></i>
+                                </a>
+                                {% endif %} {% if site.social.blog %}
+                                <a
+                                    href="{{ site.social.blog }}"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Блог"
+                                >
+                                    <i class="fas fa-blog"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <div class="footer-section">
+                            <h3>Контакт</h3>
+                            <p>
+                                <i class="fas fa-building"></i>
+                                {{ site.workplace }}<br />
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{ site.location }}<br />
+                                <i class="fas fa-phone"></i>
+                                {{ site.phone }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>
+                            &copy; {{ site.time | date: '%Y' }} {{ site.title
+                            }}. Сва права задржана.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            // Mobile menu toggle
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggle = document.querySelector(".menu-toggle");
+                const navMenu = document.querySelector(".nav-menu");
+
+                if (menuToggle && navMenu) {
+                    menuToggle.addEventListener("click", function () {
+                        const expanded =
+                            menuToggle.getAttribute("aria-expanded") === "true";
+                        menuToggle.setAttribute("aria-expanded", !expanded);
+                        navMenu.classList.toggle("active");
+                    });
+                }
+
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                    anchor.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(
+                            this.getAttribute("href"),
+                        );
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                            });
+                        }
+                    });
+                });
+
+                // Video responsive handling
+                const videos = document.querySelectorAll(
+                    'iframe[src*="youtube"]',
+                );
+                videos.forEach((video) => {
+                    const wrapper = document.createElement("div");
+                    wrapper.classList.add("video-responsive");
+                    video.parentNode.insertBefore(wrapper, video);
+                    wrapper.appendChild(video);
+                });
+            });
+        </script>
+    </body>
+</html>

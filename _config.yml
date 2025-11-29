@@ -1,0 +1,77 @@
+title: "Оливера Амиџић"
+email: olivera.amidzic@isidorbajic.edu.rs
+description: >-
+  Дипломирани педагог и стручни сарадник у Музичкој школи "Исидор Бајић"
+  у Новом Саду. Члан UNESCO-a са богатим искуством у образовању,
+  каријерном вођењу и међународним пројектима.
+baseurl: ""
+url: "https://olivera-amidzic.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Custom settings
+youtube_channel_id: "UC_dlsna-BaYv8s7abrKMZRg"
+
+# Include/Exclude
+include:
+  - _pages
+  - assets
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
+
+# Sass
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# SEO
+lang: sr
+locale: sr_RS
+
+# Social
+social:
+  youtube: "https://www.youtube.com/channel/UC_dlsna-BaYv8s7abrKMZRg"
+  website: "https://www.isidorbajic.edu.rs/olivera-amidzic-pedagog/"
+  blog: "https://oliveraaktuelnoinase.wordpress.com/"
+
+# Custom theme colors
+theme_color: "#2e7d32"
+background_color: "#f3fff3"
+text_color: "#1e3d1e"
+
+# Professional info
+workplace: 'Музичка школа "Исидор Бајић"'
+workplace_url: "https://www.isidorbajic.edu.rs/"
+position: "Стручни сарадник/педагог"
+location: "Нови Сад"
+phone: "063/535-024"

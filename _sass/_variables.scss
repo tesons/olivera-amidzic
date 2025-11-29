@@ -1,0 +1,86 @@
+// Color palette
+$primary-green: #2e7d32;
+$light-green: #4caf50;
+$dark-green: #1b5e20;
+$accent-green: #66bb6a;
+$bg-light: #f3fff3;
+$bg-white: #ffffff;
+$text-dark: #1e3d1e;
+$text-light: #424242;
+$text-muted: #757575;
+$border-light: #e8f5e8;
+$shadow-light: rgba(46, 125, 50, 0.1);
+$shadow-medium: rgba(46, 125, 50, 0.2);
+
+// Typography
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-size-xs: 0.75rem;   // 12px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-base: 1rem;    // 16px
+$font-size-lg: 1.125rem;  // 18px
+$font-size-xl: 1.25rem;   // 20px
+$font-size-2xl: 1.5rem;   // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem;  // 36px
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Spacing
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-base: 1rem;    // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+
+// Layout
+$container-max-width: 1200px;
+$header-height: 70px;
+$footer-height: auto;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-base: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-full: 50%;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-index
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+
+// Box shadows
+$shadow-sm: 0 1px 3px 0 $shadow-light;
+$shadow-base: 0 4px 6px -1px $shadow-light, 0 2px 4px -1px $shadow-light;
+$shadow-lg: 0 10px 15px -3px $shadow-medium, 0 4px 6px -2px $shadow-light;
+$shadow-xl: 0 20px 25px -5px $shadow-medium, 0 10px 10px -5px $shadow-light;
+
+// Focus states
+$focus-ring-color: rgba(46, 125, 50, 0.5);
+$focus-ring-width: 3px;
+$focus-ring-offset: 2px;

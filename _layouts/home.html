@@ -1,0 +1,144 @@
+---
+layout: default
+---
+
+<div class="home-content">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">{{ site.title }}</h1>
+            <div class="hero-description">{{ content }}</div>
+            <div class="hero-actions">
+                <a
+                    href="{{ '/pages/biografija/' | relative_url }}"
+                    class="btn btn-primary"
+                >
+                    <i class="fas fa-user"></i>
+                    Биографија
+                </a>
+                <a
+                    href="{{ '/pages/projekti/' | relative_url }}"
+                    class="btn btn-secondary"
+                >
+                    <i class="fas fa-project-diagram"></i>
+                    Пројекти
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="shortcuts-menu">
+        <div class="shortcuts-grid">
+            <div class="shortcut-card">
+                <div class="shortcut-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3>Биографија</h3>
+                <p>Погледајте професионални пут и достигнућа.</p>
+                <a
+                    href="{{ '/pages/biografija/' | relative_url }}"
+                    class="shortcut-link"
+                >
+                    Сазнајте више <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="shortcut-card">
+                <div class="shortcut-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Филозофија</h3>
+                <p>Открите основне принципе и приступе раду.</p>
+                <a
+                    href="{{ '/pages/filozofija/' | relative_url }}"
+                    class="shortcut-link"
+                >
+                    Сазнајте више <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="shortcut-card">
+                <div class="shortcut-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Пројекти</h3>
+                <p>Истражите реализоване пројекте и иницијативе.</p>
+                <a
+                    href="{{ '/pages/projekti/' | relative_url }}"
+                    class="shortcut-link"
+                >
+                    Сазнајте више <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="shortcut-card">
+                <div class="shortcut-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Пракса</h3>
+                <p>Упознајте се са практичним радом и методама.</p>
+                <a
+                    href="{{ '/pages/praksa/' | relative_url }}"
+                    class="shortcut-link"
+                >
+                    Сазнајте више <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="shortcut-card">
+                <div class="shortcut-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Документација</h3>
+                <p>Приступите педагошкој документацији.</p>
+                <a
+                    href="{{ '/pages/dokumentacija/' | relative_url }}"
+                    class="shortcut-link"
+                >
+                    Сазнајте више <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="shortcut-card">
+                <div class="shortcut-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Презентације</h3>
+                <p>Погледајте презентације и видео материјале.</p>
+                <a
+                    href="{{ '/pages/prezentacije/' | relative_url }}"
+                    class="shortcut-link"
+                >
+                    Сазнајте више <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="youtube-highlight">
+        <div class="youtube-highlight-content">
+            <h2>Видео галерија</h2>
+            <p>Погледајте најновије видео материјале са YouTube канала</p>
+            <div class="video-responsive">
+                <iframe
+                    src="https://www.youtube.com/embed?listType=user_uploads&list={{ site.youtube_channel_id }}"
+                    frameborder="0"
+                    allowfullscreen
+                    loading="lazy"
+                    title="YouTube видео галерија"
+                >
+                </iframe>
+            </div>
+            <div class="youtube-actions">
+                <a
+                    href="{{ site.social.youtube }}"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-youtube"
+                >
+                    <i class="fab fa-youtube"></i>
+                    Посетите канал
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
