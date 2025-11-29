@@ -141,33 +141,7 @@
                                     Стратегије за унапређење
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a
-                                    href="{{ '/pages/prezentacije' | relative_url }}"
-                                    class="nav-link {% if page.url contains '/prezentacije' %}active{% endif %}"
-                                >
-                                    <i class="fas fa-video"></i>
-                                    ПП Презентације
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    href="{{ '/pages/filmici' | relative_url }}"
-                                    class="nav-link {% if page.url contains '/filmici' %}active{% endif %}"
-                                >
-                                    <i class="fab fa-youtube"></i>
-                                    Филмићи
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    href="{{ '/pages/sertifikati' | relative_url }}"
-                                    class="nav-link {% if page.url contains '/sertifikati' %}active{% endif %}"
-                                >
-                                    <i class="fas fa-certificate"></i>
-                                    Сертификати
-                                </a>
-                            </li>
+
                             <li class="nav-item dropdown">
                                 <a
                                     href="#"
@@ -183,6 +157,34 @@
                                     class="dropdown-menu"
                                     aria-labelledby="navbarDropdown"
                                 >
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="{{ '/pages/prezentacije' | relative_url }}"
+                                        >
+                                            <i class="fas fa-video"></i>
+                                            ПП Презентације
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="{{ '/pages/filmici' | relative_url }}"
+                                        >
+                                            <i class="fab fa-youtube"></i>
+                                            Филмићи
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="{{ '/pages/sertifikati' | relative_url }}"
+                                        >
+                                            <i class="fas fa-certificate"></i>
+                                            Сертификати
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
                                     <li>
                                         <a
                                             class="dropdown-item"
