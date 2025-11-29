@@ -2,7 +2,6 @@
 title: Лична и професионална филозофија
 layout: page
 description: Визија, мисија и основни принципи рада - филозофски приступ образовању
-permalink: /filozofija/
 nav_order: 2
 icon: "fas fa-lightbulb"
 ---

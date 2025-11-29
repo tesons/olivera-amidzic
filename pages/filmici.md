@@ -1,7 +1,6 @@
 ---
 title: Филмићи
 layout: page
-permalink: /filmici/
 description: YouTube канал и видео материјали Оливере Амиџић
 nav_order: 8
 icon: "fab fa-youtube"

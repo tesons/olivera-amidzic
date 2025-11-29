@@ -11,6 +11,7 @@ url: "https://olivera-amidzic.github.io"
 markdown: kramdown
 highlighter: rouge
 theme: minima
+encoding: utf-8
 
 # Plugins
 plugins:

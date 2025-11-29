@@ -19,7 +19,7 @@ title: Почетна
 
 <div class="shortcuts-menu">
   <div class="shortcut-card">
-    <a href="/pages/biografija/">
+    <a href="/pages/biografija">
       <i class="fas fa-user"></i>
       <h3>Биографија/CV</h3>
       <p>Погледајте професионални пут и достигнућа</p>
@@ -27,7 +27,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/filozofija/">
+    <a href="/pages/filozofija">
       <i class="fas fa-lightbulb"></i>
       <h3>Лична и професионална филозофија</h3>
       <p>Откријте основне принципе и приступе рада - визија и мисија</p>
@@ -35,7 +35,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/projekti/">
+    <a href="/pages/projekti">
       <i class="fas fa-project-diagram"></i>
       <h3>Пројекти</h3>
       <p>Истражите реализоване пројекте и иницијативе</p>
@@ -43,7 +43,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/praksa/">
+    <a href="/pages/praksa">
       <i class="fas fa-hands-helping"></i>
       <h3>Примери добре праксе</h3>
       <p>Упознајте се са практичним радом и методама</p>
@@ -51,7 +51,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/dokumentacija/">
+    <a href="/pages/dokumentacija">
       <i class="fas fa-file-alt"></i>
       <h3>Педагошка документација</h3>
       <p>Приступите педагошкој документацији</p>
@@ -59,7 +59,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/strategije/">
+    <a href="/pages/strategije">
       <i class="fas fa-chess"></i>
       <h3>Стратегије за унапређење рада</h3>
       <p>Стратешки приступи у образовању</p>
@@ -67,7 +67,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/prezentacije/">
+    <a href="/pages/prezentacije">
       <i class="fas fa-video"></i>
       <h3>ПП Презентације</h3>
       <p>Погледајте презентације и видео материјале</p>
@@ -75,7 +75,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/filmici/">
+    <a href="/pages/filmici">
       <i class="fab fa-youtube"></i>
       <h3>Филмићи</h3>
       <p>YouTube канал са образовним садржајима</p>
@@ -83,7 +83,7 @@ title: Почетна
   </div>
   
   <div class="shortcut-card">
-    <a href="/pages/sertifikati/">
+    <a href="/pages/sertifikati">
       <i class="fas fa-certificate"></i>
       <h3>Сертификати</h3>
       <p>Професионални сертификати и потврде</p>

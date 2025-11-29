@@ -2,7 +2,6 @@
 title: Стратегије за унапређење свог рада
 layout: page
 description: Стратешки приступи за унапређење професионалног рада и образовне праксе
-permalink: /strategije/
 nav_order: 7
 icon: "fas fa-chess"
 ---

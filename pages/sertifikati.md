@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Сертификати"
-permalink: /sertifikati/
 nav_order: 9
 icon: "fas fa-certificate"
 description: "Професионални сертификати и потврде о стручном усавршавању"
