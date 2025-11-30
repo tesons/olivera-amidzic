@@ -72,39 +72,84 @@ description: "Професионални сертификати и потврд�
 ### Службени документи
 - **[Службени документ април 2022]({{ '/assets/certificates/SKM_308e22042514310.pdf' | relative_url }})**
 
-## Фотографије са догађаја
+## Динамички преглед сертификата
 
-<div class="certificates-gallery">
-  <div class="certificate-item">
-    <img src="{{ '/assets/certificates/20201013_080148.jpg' | relative_url }}" alt="Догађај октобар 2020" class="certificate-image">
-    <p>Догађај октобар 2020</p>
-  </div>
-  
-  <div class="certificate-item">
-    <img src="{{ '/assets/certificates/IMG_20220109_125544_842.jpg' | relative_url }}" alt="Семинар јануар 2022" class="certificate-image">
-    <p>Семинар јануар 2022</p>
-  </div>
-  
-  <div class="certificate-item">
-    <img src="{{ '/assets/certificates/15.png' | relative_url }}" alt="Сертификат" class="certificate-image">
-    <p>Професионални сертификат</p>
-  </div>
-  
-  <div class="certificate-item">
-    <img src="{{ '/assets/certificates/BIGZ 34.jpg' | relative_url }}" alt="БИГЗ семинар" class="certificate-image">
-    <p>БИГЗ семинар</p>
-  </div>
-  
-  <div class="certificate-item">
-    <img src="{{ '/assets/certificates/Оливера.jpg' | relative_url }}" alt="Стручно усавршавање" class="certificate-image">
-    <p>Стручно усавршавање</p>
-  </div>
-  
-  <div class="certificate-item">
-    <img src="{{ '/assets/certificates/оливера 1.jpg' | relative_url }}" alt="Професионални развој" class="certificate-image">
-    <p>Професионални развој</p>
-  </div>
+<div class="certificates-gallery" id="dynamic-certificates-gallery">
+{% assign certificate_files = site.static_files | where_exp: "file", "file.path contains '/assets/certificates/'" %}
+{% for file in certificate_files %}
+  {% assign extension = file.extname | downcase %}
+  {% if extension == '.pdf' or extension == '.png' or extension == '.jpg' or extension == '.jpeg' %}
+    {% assign filename = file.basename %}
+    
+    <div class="certificate-item" onclick="openCertificate('{{ file.path | relative_url }}')">
+      {% if extension == '.png' or extension == '.jpg' or extension == '.jpeg' %}
+        <img src="{{ file.path | relative_url }}" alt="{{ filename }}" class="certificate-image" loading="lazy">
+      {% else %}
+        <div class="pdf-thumbnail-container">
+          <canvas class="certificate-image pdf-canvas" data-pdf-url="{{ file.path | relative_url }}" id="canvas-{{ forloop.index }}"></canvas>
+          <div class="pdf-fallback certificate-image" style="display: none;">
+            <i class="fas fa-file-pdf"></i>
+            <span>PDF</span>
+          </div>
+        </div>
+      {% endif %}
+      <p>{{ filename }}</p>
+    </div>
+  {% endif %}
+{% endfor %}
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+// Configure PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+function openCertificate(url) {
+  window.open(url, '_blank');
+}
+
+async function generatePDFThumbnail(canvas, pdfUrl) {
+  try {
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+    const pdf = await loadingTask.promise;
+    const page = await pdf.getPage(1);
+    
+    const scale = 0.8;
+    const viewport = page.getViewport({ scale });
+    
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+    
+    const context = canvas.getContext('2d');
+    const renderContext = {
+      canvasContext: context,
+      viewport: viewport
+    };
+    
+    await page.render(renderContext).promise;
+    canvas.style.display = 'block';
+  } catch (error) {
+    console.error('Error generating PDF thumbnail:', error);
+    // Show fallback
+    const fallback = canvas.parentElement.querySelector('.pdf-fallback');
+    if (fallback) {
+      canvas.style.display = 'none';
+      fallback.style.display = 'flex';
+    }
+  }
+}
+
+// Generate thumbnails for all PDF canvases
+document.addEventListener('DOMContentLoaded', function() {
+  const pdfCanvases = document.querySelectorAll('.pdf-canvas');
+  pdfCanvases.forEach(canvas => {
+    const pdfUrl = canvas.dataset.pdfUrl;
+    if (pdfUrl) {
+      generatePDFThumbnail(canvas, pdfUrl);
+    }
+  });
+});
+</script>
 
 ---
 
@@ -150,12 +195,43 @@ description: "Професионални сертификати и потврд�
   margin-bottom: 0.5rem;
 }
 
+.certificate-item canvas.certificate-image {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  display: none;
+}
+
+.pdf-thumbnail-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border: 2px dashed #ccc;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pdf-fallback i {
+  font-size: 48px;
+  color: #d32f2f;
+  margin-bottom: 0.5rem;
+}
+
 .certificate-item p {
   margin: 0;
   font-size: 0.9rem;
   color: var(--text-color, #333);
   font-weight: 500;
 }
+
+
 
 @media (max-width: 576px) {
   .certificates-gallery {
