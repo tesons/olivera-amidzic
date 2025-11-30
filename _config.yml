@@ -4,8 +4,8 @@ description: >-
   Дипломирани педагог и стручни сарадник у Музичкој школи "Исидор Бајић"
   у Новом Саду. Члан UNESCO-a са богатим искуством у образовању,
   каријерном вођењу и међународним пројектима.
-baseurl: ""
-url: "https://olivera-amidzic.github.io"
+baseurl: "/olivera-amidzic"
+url: "https://tesons.github.io"
 
 # Build settings
 markdown: kramdown
