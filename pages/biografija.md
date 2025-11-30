@@ -2,7 +2,6 @@
 title: Биографија / CV
 layout: page
 description: Професионални пут и достигнућа Оливере Амиџић
-youtube_section: true
 ---
 
 # Оливера Амиџић
