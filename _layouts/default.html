@@ -42,12 +42,12 @@
         <!-- Favicon -->
         <link
             rel="icon"
-            type="image/svg+xml"
-            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232e7d32'/><text y='70' font-size='80' text-anchor='middle' x='50' fill='white'>О</text></svg>"
+            type="image/jpeg"
+            href="{{ '/assets/images/site/favicon.jpg' | relative_url }}"
         />
         <link
             rel="apple-touch-icon"
-            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232e7d32' rx='20'/><text y='70' font-size='80' text-anchor='middle' x='50' fill='white'>О</text></svg>"
+            href="{{ '/assets/images/site/favicon.jpg' | relative_url }}"
         />
     </head>
 
@@ -56,6 +56,11 @@
             <header class="site-header" role="banner">
                 <div class="header-container">
                     <div class="site-branding">
+                        <img
+                            src="{{ '/assets/images/site/avatar.jpg' | relative_url }}"
+                            alt="{{ site.title }}"
+                            class="site-avatar"
+                        />
                         <h1 class="site-title">
                             <a href="{{ '/' | relative_url }}" rel="home"
                                 >{{ site.title }}</a
@@ -78,15 +83,6 @@
                         </button>
 
                         <ul class="nav-menu" id="primary-menu">
-                            <li class="nav-item">
-                                <a
-                                    href="{{ '/' | relative_url }}"
-                                    class="nav-link {% if page.url == '/' %}active{% endif %}"
-                                >
-                                    <i class="fas fa-home"></i>
-                                    Почетна
-                                </a>
-                            </li>
                             <li class="nav-item">
                                 <a
                                     href="{{ '/pages/biografija' | relative_url }}"
