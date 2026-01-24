@@ -94,6 +94,15 @@
                             </li>
                             <li class="nav-item">
                                 <a
+                                    href="{{ '/pages/sertifikati' | relative_url }}"
+                                    class="nav-link {% if page.url contains '/sertifikati' %}active{% endif %}"
+                                >
+                                    <i class="fas fa-certificate"></i>
+                                    Сертификати
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
                                     href="{{ '/pages/filozofija' | relative_url }}"
                                     class="nav-link {% if page.url contains '/filozofija' %}active{% endif %}"
                                 >
@@ -171,15 +180,7 @@
                                             Филмићи
                                         </a>
                                     </li>
-                                    <li>
-                                        <a
-                                            class="dropdown-item"
-                                            href="{{ '/pages/sertifikati' | relative_url }}"
-                                        >
-                                            <i class="fas fa-certificate"></i>
-                                            Сертификати
-                                        </a>
-                                    </li>
+                                    <!-- Сертификати moved to primary navigation -->
 
                                     <li>
                                         <a
